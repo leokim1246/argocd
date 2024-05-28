@@ -1,0 +1,11 @@
+apiVersion: v1 // 이 부분은 디스크립터가 쿠버네티스 api 버전 v1을 준수한다는 의미입니다.
+kind: Pod // Pod에 관한 디스크립터라는 의미이죠.
+metadata:
+  name: argotest // 파드의 이름을 의미합니다.
+spec:
+  containers:
+  - image: adamdoha/kubia // 컨테이너를 만드는 컨테이너 이미지를 의미합니다.(아래에서 설명드리겠습니다)
+    name: kubia // 이건 컨테이너의 이름이 되겠습니다.
+    ports:
+    - containerPort: 8080 // Application이 수신하는 포트를 의미합니다.
+      protocol: TCP
