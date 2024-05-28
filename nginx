@@ -23,7 +23,7 @@ spec:
         ports:
         - containerPort: 80
 EOF
-
+  
 # nginx service 작성
 cat > nginx/service.yaml << EOF
 apiVersion: v1
